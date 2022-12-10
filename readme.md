@@ -1,7 +1,10 @@
-Игра пятнашки
-почта создателей -- qubedron@gmail.com -- illa -- kinonokia@gmail.com -- Kiril
+#Игра пятнашки
 
-План
+##почта создателей 
+-- qubedron@gmail.com -- Illa 
+-- kinonokia@gmail.com -- Kiril
+
+##План
 1 Дизаин проекта 
     главная станица
     игровое поле
