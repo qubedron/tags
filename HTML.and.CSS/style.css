@@ -77,6 +77,12 @@ select {
     }
 }
 
+.all__code {
+    display: flex;
+    justify-content: center;
+}
+
+
 .background {
     background-image: url(../IMG/fon.jpeg);
     width: 100%;
@@ -84,7 +90,7 @@ select {
 }
 
 
-.h{
+.h {
     display: flex;
     height: 100px;
 }
@@ -100,7 +106,7 @@ select {
     margin: 10px;
 }
 
-.btn{
+.btn {
     display: flex;
     background-color: goldenrod;
     border-radius: 50px;
@@ -110,7 +116,7 @@ select {
     margin: 10px;
 }
 
-.top{
+.top {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -118,3 +124,42 @@ select {
     flex-direction: row;
 }
 
+.gameScreen {
+    display: grid;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 400px;
+    width: 600px;
+    justify-content: center;
+}
+
+.gameScreen div {
+    display: grid;
+    background-color: goldenrod;
+}
+
+
+.gameTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid black;
+}
+
+.gameBoard div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid black;
+    height: 100px;
+}
+
+.gameFoot {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid black;
+}
