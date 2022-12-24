@@ -13,7 +13,7 @@
 <body>
     <div class="background">
         <div class="all__code">
-            <!-- <div class="mainScreen">
+            <div class="mainScreen" v-show="mainScreen">
                 <div class="h">
                     <button class="patnashki btn1">
                         <div class="bigBtn">
@@ -23,42 +23,41 @@
                 </div>
 
                 <div class="top">
-                    <button class="statistic btn2">
+                    <button class="statistic btn2" @click="goToStatisticScreen">
                         <div class="bigBtn">
                             статистика
                         </div>
                     </button>
 
-                    <button class="play btn3">
+                    <button class="play btn3" @click="goToPlayScreen">
                         <div class="bigBtn">
                             ИГРАТЬ
                         </div>
                     </button>
-
-                    <button class="aboutUs btn4">
+                    <button class="aboutUs btn4" @click="goToAutorsScreen">
                         <div class="bigBtn">
                             создатели
                         </div>
                     </button>
                 </div>
                 <div class="top">
-                    <button class="rules btn5">
+                    <button class="rules btn5" @click="goToRulesScreen">
                         <div class="bigBtn">
                             правила
                         </div>
                     </button>
                 </div>
-            </div> -->
-<!-- 
-            <div class="autors">
+            </div>
+
+            <div class="autors" v-show="autorsScreen">
                 <div class="urlAutors">
                     <a href="https://scalan.com/author/qubedron/">Qubedron</a>
-                    <a href="https://scalan.com/author/qubedron/">Qubedron</a>
+                    <a href="mailto:kinonokia@gmail.com">kinonokia</a>
                 </div>
-                <div class="btn back"><i class="fa fa-facebook"></i>Back</div>
-            </div> -->
+                <div class="btn back" @click="goToMainScreen"><i class="fa fa-facebook"></i>Back</div>
+            </div>
 
-            <!-- <div class="gameScreen">
+            <div class="gameScreen" v-show="playScreen">
                 <div class="gameTop">
                     <div class="gameTopOne"> Новая игра </div>
                     <div class="gameTopTwo">
@@ -87,22 +86,22 @@
                     <div></div>
                 </div>
                 <div class="gameFoot">
-                    <div>Меню</div>
+                    <div @click="goToMainScreen">Меню</div>
                 </div>
 
-            </div> -->
+            </div>
 
-            <!-- <div class="pravila">
+            <div class="pravila" v-show="rulesScreen">
                 <div class="textPrav">A leader is selected, who receives a colored bandage and becomes in the center of
                     the site. After the signal: "Catch!" - all the children scatter around the playground, and the
                     driver tries to catch up with one of the players and tarnish. The one who was stained by the driver
                     steps aside. After 2-3 repetitions, Fifteen changes.
                 </div>
-                <div class="btn back"><i class="fa fa-facebook"></i>Back</div>
-            </div> -->
+                <div class="btn back" @click="goToMainScreen"><i class="fa fa-facebook"></i>Back</div>
+            </div>
 
-            <!-- <div class="statScr">
-                
+            <div class="statScr" v-show="statisticScreen">
+
                 <div class="statTop">Статистика</div>
 
                 <div class="statBoard">
@@ -114,10 +113,69 @@
                     <div>0</div>
                 </div>
 
-                <div class="statFoot">Меню</div>
+                <div class="statFoot" @click="goToMainScreen">Меню</div>
 
-            </div> -->
+            </div> 
 
         </div>
     </div>
 </body>
+
+<script src="./vue.js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el: '.background',
+        data: {
+            mainScreen:true,
+            playScreen: false,
+            rulesScreen: false,
+            statisticScreen: false,
+            autorsScreen: false,
+
+        },
+        methods:{
+            goToMainScreen () {
+            this.mainScreen = true;
+            this.playScreen = false;
+            this.rulesScreen = false;
+            this.statisticScreen = false;
+            this.autorsScreen = false;
+            },
+
+            goToPlayScreen () {
+            this.mainScreen = false;
+            this.playScreen = true;
+            this.rulesScreen = false;
+            this.statisticScreen = false;
+            this.autorsScreen = false;
+            },
+
+            goToRulesScreen () {
+            this.mainScreen = false;
+            this.playScreen = false;
+            this.rulesScreen = true;
+            this.statisticScreen = false;
+            this.autorsScreen = false;
+            },
+
+            goToStatisticScreen () {
+            this.mainScreen = false;
+            this.playScreen = false;
+            this.rulesScreen = false;
+            this.statisticScreen = true;
+            this.autorsScreen = false;
+            },
+
+            goToAutorsScreen () {
+            this.mainScreen = false;
+            this.playScreen = false;
+            this.rulesScreen = false;
+            this.statisticScreen = false;
+            this.autorsScreen = true;
+            },
+
+
+        }
+    })
+
+</script>
