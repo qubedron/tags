@@ -84,13 +84,13 @@ select {
     width: 100%;
 }
 
-.mainScreen{
-margin-top: 300px;
-font-size: 30px;
+.mainScreen {
+    margin-top: 300px;
+    font-size: 30px;
 }
 
 .background {
-    background-image: url(../IMG/bgimg.jpg);
+    background-image: url(../IMG/christmas-1869902_960_720.jpg);
     /* background-color: darkblue; */
     width: 100%;
     height: 100vh;
@@ -117,26 +117,30 @@ font-size: 30px;
     display: flex;
     border-radius: 100px 100px 5px 5px;
     border: 2px solid black;
-    height: 75px;
+    height: 85px;
     width: 300px;
     justify-content: center;
     background-color: rgb(93, 209, 122);
     width: 100%;
-    height: 50px;    
+    height: 50px;
 }
 
-.bigBtn{
+.patnashki{
+    height: 70px;
+}
+.bigBtn {
     font-size: 45px;
+   
 }
 
-.urlAutors{
-background-color: red;
-border-radius: 50px;
-border: 3px black solid;
+.urlAutors {
+    background-color: red;
+    border-radius: 50px;
+    border: 3px black solid;
 
 }
 
-.autors{
+.autors {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -152,6 +156,7 @@ border: 3px black solid;
     justify-content: center;
 
 }
+
 .btn3 {
     display: flex;
     background-color: red;
@@ -160,8 +165,9 @@ border: 3px black solid;
     height: 75px;
     width: 300px;
     justify-content: center;
-    
+
 }
+
 .btn4 {
     display: flex;
     background-color: rgb(93, 209, 122);
@@ -171,6 +177,7 @@ border: 3px black solid;
     width: 300px;
     justify-content: center;
 }
+
 .btn5 {
     display: flex;
     background-color: rgb(93, 209, 122);
@@ -189,10 +196,17 @@ border: 3px black solid;
     flex-direction: row;
 }
 
-.back{
-    background-color: red;
-    border: 3px solid black;
-    border-radius: 50px;
+.back {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgb(207, 29, 16);
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    border-radius: 50%;
+    width: 98px;
+    height: 98px;
     margin: 20px;
 }
 

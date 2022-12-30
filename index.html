@@ -17,7 +17,7 @@
                 <div class="h">
                     <button class="patnashki btn1">
                         <div class="bigBtn">
-                            пятнашки
+                            Tags
                         </div>
                     </button>
                 </div>
@@ -25,25 +25,25 @@
                 <div class="top">
                     <button class="statistic btn2" @click="goToStatisticScreen">
                         <div class="bigBtn">
-                            статистика
+                            Statistics
                         </div>
                     </button>
 
                     <button class="play btn3" @click="goToPlayScreen">
                         <div class="bigBtn">
-                            ИГРАТЬ
+                            PLAY
                         </div>
                     </button>
                     <button class="aboutUs btn4" @click="goToAutorsScreen">
                         <div class="bigBtn">
-                            создатели
+                            Creators
                         </div>
                     </button>
                 </div>
                 <div class="top">
                     <button class="rules btn5" @click="goToRulesScreen">
                         <div class="bigBtn">
-                            правила
+                            regulations
                         </div>
                     </button>
                 </div>
@@ -59,9 +59,9 @@
 
             <div class="gameScreen" v-show="playScreen">
                 <div class="gameTop">
-                    <div class="gameTopOne"> Новая игра </div>
+                    <div class="gameTopOne"> New game </div>
                     <div class="gameTopTwo">
-                        <div>Количество ходов:</div>
+                        <div>Number of moves:</div>
                         <div>0</div>
                     </div>
 
@@ -86,7 +86,7 @@
                     <div @click="usersClick(3,3)">{{desk[3][3]}}</div>
                 </div>
                 <div class="gameFoot">
-                    <div @click="goToMainScreen">Меню</div>
+                    <div @click="goToMainScreen">Menu</div>
                 </div>
 
             </div>
@@ -97,23 +97,24 @@
                     driver tries to catch up with one of the players and tarnish. The one who was stained by the driver
                     steps aside. After 2-3 repetitions, Fifteen changes.
                 </div>
-                <div class="btn back" @click="goToMainScreen"><i class="fa fa-facebook"></i>Back</div>
+                <div class="btn back" @click="goToMainScreen"> <i>Back</i> 
+                </div>
             </div>
 
             <div class="statScr" v-show="statisticScreen">
 
-                <div class="statTop">Статистика</div>
+                <div class="statTop">Statistics</div>
 
                 <div class="statBoard">
-                    <div>Количество игр</div>
+                    <div>Number of games</div>
                     <div>0</div>
-                    <div>Выиграно игр</div>
+                    <div>Games won</div>
                     <div>0</div>
-                    <div>Проиграно игр</div>
+                    <div>Games lost</div>
                     <div>0</div>
                 </div>
 
-                <div class="statFoot" @click="goToMainScreen">Меню</div>
+                <div class="statFoot" @click="goToMainScreen">Menu</div>
 
             </div>
 
