@@ -62,7 +62,7 @@
                     <div class="gameTopOne"> New game </div>
                     <div class="gameTopTwo">
                         <div>Number of moves:</div>
-                        <div>0</div>
+                        <div>{{movesCount}}</div>
                     </div>
 
                 </div>
@@ -110,8 +110,6 @@
                     <div>0</div>
                     <div>Games won</div>
                     <div>0</div>
-                    <div>Games lost</div>
-                    <div>0</div>
                 </div>
 
                 <div class="statFoot" @click="goToMainScreen">Menu</div>
@@ -138,6 +136,7 @@
                 ['9', '10', '11', '12'],
                 ['13', '14', '15', ' ']
             ],
+            movesCount: 0,
         },
         methods: {
             goToMainScreen() {
@@ -154,6 +153,7 @@
                 this.rulesScreen = false;
                 this.statisticScreen = false;
                 this.autorsScreen = false;
+
                 // Перемешать фишки
                 this.desk = [
                     ['1', '2', '3', '4'],
@@ -224,33 +224,34 @@
                 //Проверяем есть ли вверху пустая клеточка
                 if (row > 0) {
                     if (this.desk[row - 1][column] == " ") {
-                        this.desk[row - 1][column] = this.desk[row][column]
-                        this.desk[row][column] = " "
+                        this.desk[row - 1][column] = this.desk[row][column];
+                        this.desk[row][column] = " ";
+                        this.movesCount++;
                     }
                 }
                 //Проверяем есть ли снизу пустая клеточка
                 if (row < 3) {
                     if (this.desk[row + 1][column] == " ") {
-                        this.desk[row + 1][column] = this.desk[row][column]
-                        this.desk[row][column] = " "
+                        this.desk[row + 1][column] = this.desk[row][column];
+                        this.desk[row][column] = " ";
+                        this.movesCount++;
                     }
-
                 }
                 //Проверяем есть ли слева пустая клеточка
                 if (column > 0) {
                     if (this.desk[row][column - 1] == " ") {
-                        this.desk[row][column - 1] = this.desk[row][column]
-                        this.desk[row][column] = " "
+                        this.desk[row][column - 1] = this.desk[row][column];
+                        this.desk[row][column] = " ";
+                        this.movesCount++;
                     }
-
                 }
                 //Проверяем есть ли справа пустая клеточка
                 if (column < 3) {
                     if (this.desk[row][column + 1] == " ") {
-                        this.desk[row][column + 1] = this.desk[row][column]
-                        this.desk[row][column] = " "
+                        this.desk[row][column + 1] = this.desk[row][column];
+                        this.desk[row][column] = " ";
+                        this.movesCount++;
                     }
-
                 }
                 this.$forceUpdate();
             }
