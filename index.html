@@ -97,7 +97,7 @@
                     driver tries to catch up with one of the players and tarnish. The one who was stained by the driver
                     steps aside. After 2-3 repetitions, Fifteen changes.
                 </div>
-                <div class="btn back" @click="goToMainScreen"> <i>Back</i> 
+                <div class="btn back" @click="goToMainScreen"> <i>Back</i>
                 </div>
             </div>
 
@@ -165,7 +165,6 @@
                 let y = 3;
                 for (let i = 0; i < 1000; i++) {
                     let r = Math.floor(Math.random() * 4);
-                    console.log(r);
                     if (r == 0) { // Up
                         if (y > 0) {
                             this.desk[y][x] = this.desk[y - 1][x];
@@ -222,7 +221,38 @@
                 this.autorsScreen = true;
             },
             usersClick(row, column) {
-                console.log(row + "," + column);
+                //Проверяем есть ли вверху пустая клеточка
+                if (row > 0) {
+                    if (this.desk[row - 1][column] == " ") {
+                        this.desk[row - 1][column] = this.desk[row][column]
+                        this.desk[row][column] = " "
+                    }
+                }
+                //Проверяем есть ли снизу пустая клеточка
+                if (row < 3) {
+                    if (this.desk[row + 1][column] == " ") {
+                        this.desk[row + 1][column] = this.desk[row][column]
+                        this.desk[row][column] = " "
+                    }
+
+                }
+                //Проверяем есть ли слева пустая клеточка
+                if (column > 0) {
+                    if (this.desk[row][column - 1] == " ") {
+                        this.desk[row][column - 1] = this.desk[row][column]
+                        this.desk[row][column] = " "
+                    }
+
+                }
+                //Проверяем есть ли справа пустая клеточка
+                if (column < 3) {
+                    if (this.desk[row][column + 1] == " ") {
+                        this.desk[row][column + 1] = this.desk[row][column]
+                        this.desk[row][column] = " "
+                    }
+
+                }
+                this.$forceUpdate();
             }
 
 
