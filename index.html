@@ -130,6 +130,7 @@
             rulesScreen: false,
             statisticScreen: false,
             autorsScreen: false,
+            gameF: true,
             desk: [
                 ['1', '2', '3', '4'],
                 ['5', '6', '7', '8'],
@@ -153,17 +154,18 @@
                 this.rulesScreen = false;
                 this.statisticScreen = false;
                 this.autorsScreen = false;
+                this.gameF = true,
 
-                // Перемешать фишки
-                this.desk = [
-                    ['1', '2', '3', '4'],
-                    ['5', '6', '7', '8'],
-                    ['9', '10', '11', '12'],
-                    ['13', '14', '15', ' ']
-                ];
+                    // Перемешать фишки
+                    this.desk = [
+                        ['1', '2', '3', '4'],
+                        ['5', '6', '7', '8'],
+                        ['9', '10', '11', '12'],
+                        ['13', '14', '15', ' ']
+                    ];
                 let x = 3;
                 let y = 3;
-                for (let i = 0; i < 1000; i++) {
+                for (let i = 0; i < 10000   ; i++) {
                     let r = Math.floor(Math.random() * 4);
                     if (r == 0) { // Up
                         if (y > 0) {
@@ -221,44 +223,51 @@
                 this.autorsScreen = true;
             },
             usersClick(row, column) {
-                //Проверяем есть ли вверху пустая клеточка
-                if (row > 0) {
-                    if (this.desk[row - 1][column] == " ") {
-                        this.desk[row - 1][column] = this.desk[row][column];
-                        this.desk[row][column] = " ";
-                        this.movesCount++;
+                //Если игра активна
+                if (this.gameF == true) {
+                    //Проверяем есть ли вверху пустая клеточка
+                    if (row > 0) {
+                        if (this.desk[row - 1][column] == " ") {
+                            this.desk[row - 1][column] = this.desk[row][column];
+                            this.desk[row][column] = " ";
+                            this.movesCount++;
+                        }
                     }
-                }
-                //Проверяем есть ли снизу пустая клеточка
-                if (row < 3) {
-                    if (this.desk[row + 1][column] == " ") {
-                        this.desk[row + 1][column] = this.desk[row][column];
-                        this.desk[row][column] = " ";
-                        this.movesCount++;
+                    //Проверяем есть ли снизу пустая клеточка
+                    if (row < 3) {
+                        if (this.desk[row + 1][column] == " ") {
+                            this.desk[row + 1][column] = this.desk[row][column];
+                            this.desk[row][column] = " ";
+                            this.movesCount++;
+                        }
                     }
-                }
-                //Проверяем есть ли слева пустая клеточка
-                if (column > 0) {
-                    if (this.desk[row][column - 1] == " ") {
-                        this.desk[row][column - 1] = this.desk[row][column];
-                        this.desk[row][column] = " ";
-                        this.movesCount++;
+                    //Проверяем есть ли слева пустая клеточка
+                    if (column > 0) {
+                        if (this.desk[row][column - 1] == " ") {
+                            this.desk[row][column - 1] = this.desk[row][column];
+                            this.desk[row][column] = " ";
+                            this.movesCount++;
+                        }
                     }
-                }
-                //Проверяем есть ли справа пустая клеточка
-                if (column < 3) {
-                    if (this.desk[row][column + 1] == " ") {
-                        this.desk[row][column + 1] = this.desk[row][column];
-                        this.desk[row][column] = " ";
-                        this.movesCount++;
+                    //Проверяем есть ли справа пустая клеточка
+                    if (column < 3) {
+                        if (this.desk[row][column + 1] == " ") {
+                            this.desk[row][column + 1] = this.desk[row][column];
+                            this.desk[row][column] = " ";
+                            this.movesCount++;
+                        }
                     }
+                    //Проверка на конец игры
+                    if (this.desk[0][0] == 1 && this.desk[0][1] == 2 && this.desk[0][2] == 3 && this.desk[0][3] == 4 
+                    && this.desk[1][0] == 5 && this.desk[1][1] == 6 && this.desk[1][2] == 7 && this.desk[1][3] == 8
+                    && this.desk[2][0] == 9 && this.desk[2][1] == 10 && this.desk[2][2] == 11 && this.desk[2][3] == 12
+                    && this.desk[3][0] == 13 && this.desk[3][1] == 14 && this.desk[3][2] == 15) {
+                        this.gameF = false;
+                    }
+                    this.$forceUpdate();
                 }
-                this.$forceUpdate();
             }
-
-
-
         }
     })
 
-</script>
+</script>Men
