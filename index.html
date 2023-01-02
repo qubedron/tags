@@ -43,7 +43,7 @@
                 <div class="top">
                     <button class="rules btn5" @click="goToRulesScreen">
                         <div class="bigBtn">
-                            regulations
+                            Regulations
                         </div>
                     </button>
                 </div>
@@ -51,15 +51,15 @@
 
             <div class="autors" v-show="autorsScreen">
                 <div class="urlAutors">
-                    <a href="https://scalan.com/author/qubedron/">Qubedron</a>
-                    <a href="mailto:kinonokia@gmail.com">kinonokia</a>
+                    <a href="https://scalan.com/author/qubedron/">Qubedron</a> <br> 
+                    <a href="https://github.com/kinonokia">kinonokia</a>
                 </div>
-                <div class="btn back" @click="goToMainScreen"><i class="fa fa-facebook"></i>Back</div>
+                <div class="gameFoot" @click="goToMainScreen">Menu</div>
             </div>
 
             <div class="gameScreen" v-show="playScreen">
                 <div class="gameTop">
-                    <div class="gameTopOne"> New game </div>
+                    <div class="gameTopOne" @click="goToPlayScreen"> New game </div>
                     <div class="gameTopTwo">
                         <div>Number of moves:</div>
                         <div>{{movesCount}}</div>
@@ -85,8 +85,8 @@
                     <div @click="usersClick(3,2)">{{desk[3][2]}}</div>
                     <div @click="usersClick(3,3)">{{desk[3][3]}}</div>
                 </div>
-                <div class="gameFoot">
-                    <div @click="goToMainScreen">Menu</div>
+                <div class="gameFoot" @click="goToMainScreen">
+                    <div>Menu</div>
                 </div>
 
             </div>
@@ -97,7 +97,7 @@
                     driver tries to catch up with one of the players and tarnish. The one who was stained by the driver
                     steps aside. After 2-3 repetitions, Fifteen changes.
                 </div>
-                <div class="btn back" @click="goToMainScreen"> <i>Back</i>
+                <div class="gameFoot" @click="goToMainScreen">Menu
                 </div>
             </div>
 
@@ -112,7 +112,7 @@
                     <div>0</div>
                 </div>
 
-                <div class="statFoot" @click="goToMainScreen">Menu</div>
+                <div class="gameFoot" @click="goToMainScreen">Menu</div>
 
             </div>
 
@@ -165,7 +165,7 @@
                     ];
                 let x = 3;
                 let y = 3;
-                for (let i = 0; i < 10000   ; i++) {
+                for (let i = 0; i < 1000; i++) {
                     let r = Math.floor(Math.random() * 4);
                     if (r == 0) { // Up
                         if (y > 0) {
@@ -258,11 +258,12 @@
                         }
                     }
                     //Проверка на конец игры
-                    if (this.desk[0][0] == 1 && this.desk[0][1] == 2 && this.desk[0][2] == 3 && this.desk[0][3] == 4 
-                    && this.desk[1][0] == 5 && this.desk[1][1] == 6 && this.desk[1][2] == 7 && this.desk[1][3] == 8
-                    && this.desk[2][0] == 9 && this.desk[2][1] == 10 && this.desk[2][2] == 11 && this.desk[2][3] == 12
-                    && this.desk[3][0] == 13 && this.desk[3][1] == 14 && this.desk[3][2] == 15) {
+                    if (this.desk[0][0] == 1 && this.desk[0][1] == 2 && this.desk[0][2] == 3 && this.desk[0][3] == 4
+                        && this.desk[1][0] == 5 && this.desk[1][1] == 6 && this.desk[1][2] == 7 && this.desk[1][3] == 8
+                        && this.desk[2][0] == 9 && this.desk[2][1] == 10 && this.desk[2][2] == 11 && this.desk[2][3] == 12
+                        && this.desk[3][0] == 13 && this.desk[3][1] == 14 && this.desk[3][2] == 15) {
                         this.gameF = false;
+                        alert("Congratulation! You win!")
                     }
                     this.$forceUpdate();
                 }
@@ -270,4 +271,4 @@
         }
     })
 
-</script>Men
+</script>
