@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="./fonts/Ultra/Ultra-Regular.ttf">
     <title>Tags</title>
 </head>
 
 <body>
+    
     <div class="background">
         <div class="all__code">
             <div class="mainScreen" v-show="mainScreen">
                 <div class="h">
                     <button class="patnashki btn1">
                         <div class="bigBtn">
+
                             Tags
                         </div>
                     </button>
@@ -109,7 +112,7 @@
                     <div>Number of games</div>
                     <div>0</div>
                     <div>Games won</div>
-                    <div>0</div>
+                    <div>{{movesCount}}</div>
                 </div>
 
                 <div class="gameFoot" @click="goToMainScreen">Menu</div>
@@ -166,10 +169,14 @@
                 let x = 3;
                 let y = 3;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for (let i = 0; i < 1000; i++) {
 =======
                 for (let i = 0; i < 10000; i++) {
 >>>>>>> 1d17993 (.)
+=======
+                for (let i = 0; i < 1000; i++) {
+>>>>>>> aa968c1 (Add background fon and font size)
                     let r = Math.floor(Math.random() * 4);
                     if (r == 0) { // Up
                         if (y > 0) {
