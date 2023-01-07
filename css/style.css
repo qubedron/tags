@@ -335,6 +335,7 @@ select {
     height: 100px;
     width: 100px;
     justify-self: center;
+    font-family: Cristmas;
 }
 
 .gameFoot:hover {

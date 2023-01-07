@@ -171,6 +171,7 @@
                 let y = 3;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 for (let i = 0; i < 1000; i++) {
 =======
                 for (let i = 0; i < 10000; i++) {
@@ -178,6 +179,9 @@
 =======
                 for (let i = 0; i < 1000; i++) {
 >>>>>>> aa968c1 (Add background fon and font size)
+=======
+                for (let i = 0; i < 2; i++) {
+>>>>>>> 545cbf1 (Add cycle check)
                     let r = Math.floor(Math.random() * 4);
                     if (r == 0) { // Up
                         if (y > 0) {
@@ -270,14 +274,36 @@
                         }
                     }
                     //Проверка на конец игры
-                    if (this.desk[0][0] == 1 && this.desk[0][1] == 2 && this.desk[0][2] == 3 && this.desk[0][3] == 4
+                    /*if (this.desk[0][0] == 1 && this.desk[0][1] == 2 && this.desk[0][2] == 3 && this.desk[0][3] == 4
                         && this.desk[1][0] == 5 && this.desk[1][1] == 6 && this.desk[1][2] == 7 && this.desk[1][3] == 8
                         && this.desk[2][0] == 9 && this.desk[2][1] == 10 && this.desk[2][2] == 11 && this.desk[2][3] == 12
                         && this.desk[3][0] == 13 && this.desk[3][1] == 14 && this.desk[3][2] == 15) {
                         this.gameF = false;
                         alert("Congratulation! You win!")
                     }
+                    */
+                    console.log("---------------------");
+                    this.gameF = false;
+                    for(var i=0; i<this.desk.length; i++){
+                        for(var j=0; j<this.desk[i].length; j++){
+                            if(i==this.desk.length-1 && j==this.desk[i].length-1){
+                                // Skip last cell.
+                            }
+                            else{
+                                var npp = i*this.desk.length + j + 1;
+                                if(parseInt(this.desk[i][j], 10) !== npp){
+                                    this.gameF = true;
+                                }
+                                //console.log(this.desk[i][j]+" ? "+npp + " "+this.gameF);
+                            }
+                        }
+                    }
                     this.$forceUpdate();
+                    if(this.gameF == false){
+                        alert("Congratulation! You win!");
+
+                    }
+                    
                 }
             }
         }
