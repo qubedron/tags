@@ -90,7 +90,7 @@ select {
 }
 
 .background {
-    background-image: url(../IMG/christmas-1869902_960_720.jpg);
+    background-image: url(../IMG/d11e0ab0bacf355661b347eb2b49ae57.jpeg);
     /* background-color: darkblue; */
     width: 100%;
     height: 100vh;
@@ -98,6 +98,14 @@ select {
     align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+@font-face {
+    font-family: Cristmas;
+    src: url(../fonts/Ultra/Ultra-Regular.ttf);
+}
+
+>>>>>>> 985497a (Add icon)
 .h {
     display: flex;
     justify-content: center;
@@ -114,6 +122,10 @@ select {
     align-items: center;
     background-color: rgba(93, 209, 122, 0.74);
     margin-bottom: 20px;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .bigBtn {
@@ -129,6 +141,10 @@ select {
     width: 300px;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .btn2:hover {
@@ -145,12 +161,20 @@ select {
     width: 300px;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .btn3:hover {
     display: flex;
     background-color: rgb(207, 29, 16);
     font-weight: bold;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .btn4 {
@@ -162,11 +186,19 @@ select {
     width: 300px;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .btn4:hover {
     background-color: rgb(37, 218, 82);
     font-weight: bold;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 
@@ -180,11 +212,19 @@ select {
     justify-content: center;
     align-items: center;
     margin: 20px;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .btn5:hover {
     background-color: rgb(37, 218, 82);
     font-weight: bold;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 
@@ -226,12 +266,18 @@ select {
     font-size: 25px;
     font-weight: bold;
     height: 45px;
+    font-family: Cristmas;
 }
 
 .gameTopTwo {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 10px;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+    width: 100px;
+>>>>>>> 985497a (Add icon)
 }
 
 .gameTopTwo div {
@@ -256,6 +302,7 @@ select {
     align-self: center;
     gap: 3px;
     padding: 3px;
+    font-family: Cristmas;
 }
 
 .gameBoard div {
@@ -304,6 +351,10 @@ select {
     flex-direction: column;
     align-items: center;
     grid-row-gap: 20px;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .textPrav {
@@ -328,6 +379,7 @@ select {
     margin-right: 50px;
     margin-top: 100px;
     font-size: 20px;
+    font-family: Cristmas;
 }
 
 .statTop {
@@ -391,6 +443,10 @@ select {
     color: rgb(4, 31, 61);
     font-weight: bold;
     font-size: 25px;
+<<<<<<< HEAD
+=======
+    font-family: Cristmas;
+>>>>>>> 985497a (Add icon)
 }
 
 .autors {
