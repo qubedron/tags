@@ -453,7 +453,7 @@ select {
         border-radius: 100px 100px 5px 5px;
         border: 2px solid black;
         height: 100px;
-        width: 1500px;
+        width: 750px;
         justify-content: center;
         align-items: center;
         background-color: rgba(93, 209, 122, 0.74);
@@ -468,7 +468,7 @@ select {
         border-radius: 100px 0px 0px 30px;
         border: 2px solid black;
         height: 100px;
-        width: 750px;
+        width: 250px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -481,7 +481,7 @@ select {
         border-radius: 0px 0px 0px 0px;
         border: 2px solid black;
         height: 100px;
-        width: 750px;
+        width: 250px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -494,7 +494,7 @@ select {
         border-radius: 0px 100px 30px 0px;
         border: 2px solid black;
         height: 100px;
-        width: 750px;
+        width: 250px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -507,7 +507,7 @@ select {
         border-radius: 5px 5px 100px 100px;
         border: 2px solid black;
         height: 100px;
-        width: 1500px;
+        width: 750px;
         justify-content: center;
         align-items: center;
         margin: 10px;
