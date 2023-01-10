@@ -452,14 +452,14 @@ select {
         display: flex;
         border-radius: 100px 100px 5px 5px;
         border: 2px solid black;
-        height: 100px;
-        width: 750px;
+        height: 25px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         background-color: rgba(93, 209, 122, 0.74);
         margin-bottom: 10px;
         font-family: Cristmas;
-        font-size: 70px;
+        font-size: 15px;
     }
 
     .btn2 {
@@ -467,12 +467,12 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 100px 0px 0px 30px;
         border: 2px solid black;
-        height: 100px;
-        width: 250px;
+        height: 25px;
+        width: 70px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
-        font-size: 40px;
+        font-size: 10px;
     }
 
     .btn3 {
@@ -480,12 +480,12 @@ select {
         background-color: rgba(253, 30, 30, 0.856);
         border-radius: 0px 0px 0px 0px;
         border: 2px solid black;
-        height: 100px;
-        width: 250px;
+        height: 25px;
+        width: 33px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
-        font-size: 50px;
+        font-size: 10px;
     }
 
     .btn4 {
@@ -493,12 +493,12 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 0px 100px 30px 0px;
         border: 2px solid black;
-        height: 100px;
-        width: 250px;
+        height: 25px;
+        width: 33px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
-        font-size: 40px;
+        font-size: 10px;
     }
 
     .btn5 {
@@ -506,13 +506,13 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 5px 5px 100px 100px;
         border: 2px solid black;
-        height: 100px;
-        width: 750px;
+        height: 25px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         margin: 10px;
         font-family: Cristmas;
-        font-size: 40px;
+        font-size: 10px;
     }
 
     .textPrav {
@@ -524,7 +524,7 @@ select {
         background-color: goldenrod;
         border: 1px solid black;
         border-radius: 50px;
-        font-size: 40px;
+        font-size: 10px;
     }
 
     .statBoard {
