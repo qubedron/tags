@@ -465,7 +465,7 @@ select {
     .btn2 {
         display: flex;
         background-color: rgba(93, 209, 122, 0.74);
-        border-radius: 100px 0px 0px 30px;
+        /* border-radius: 100px 0px 0px 30px; */
         border: 2px solid black;
         height: 50px;
         width: 100px;
@@ -478,7 +478,7 @@ select {
     .btn3 {
         display: flex;
         background-color: rgba(253, 30, 30, 0.856);
-        border-radius: 0px 0px 0px 0px;
+        /* border-radius: 0px 0px 0px 0px; */
         border: 2px solid black;
         height: 50px;
         width: 100px;
@@ -491,7 +491,7 @@ select {
     .btn4 {
         display: flex;
         background-color: rgba(93, 209, 122, 0.74);
-        border-radius: 0px 100px 30px 0px;
+        /* border-radius: 0px 100px 30px 0px; */
         border: 2px solid black;
         height: 50px;
         width: 100px;
