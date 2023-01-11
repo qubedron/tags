@@ -452,8 +452,8 @@ select {
         display: flex;
         border-radius: 100px 100px 5px 5px;
         border: 2px solid black;
-        height: 25px;
-        width: 100px;
+        height: 50px;
+        width: 300px;
         justify-content: center;
         align-items: center;
         background-color: rgba(93, 209, 122, 0.74);
@@ -467,8 +467,8 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 100px 0px 0px 30px;
         border: 2px solid black;
-        height: 25px;
-        width: 70px;
+        height: 50px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -480,8 +480,8 @@ select {
         background-color: rgba(253, 30, 30, 0.856);
         border-radius: 0px 0px 0px 0px;
         border: 2px solid black;
-        height: 25px;
-        width: 40px;
+        height: 50px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -493,8 +493,8 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 0px 100px 30px 0px;
         border: 2px solid black;
-        height: 25px;
-        width: 70px;
+        height: 50px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         font-family: Cristmas;
@@ -506,8 +506,8 @@ select {
         background-color: rgba(93, 209, 122, 0.74);
         border-radius: 5px 5px 100px 100px;
         border: 2px solid black;
-        height: 25px;
-        width: 100px;
+        height: 50px;
+        width: 300px;
         justify-content: center;
         align-items: center;
         margin: 10px;
