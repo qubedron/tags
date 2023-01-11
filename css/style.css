@@ -424,11 +424,11 @@ select {
 @media only screen and (max-width:3000px) {
     .number {
         display: grid;
-        width: 100px;
-        height: 100px;
+        width: 25px;
+        height: 25px;
         font-size: small;
         align-items: center;
-        font-size: 40px;
+        font-size: 10px;
     }
 
     .gameFoot {
@@ -440,10 +440,10 @@ select {
         border-radius: 50%;
         align-items: center;
         justify-items: center;
-        font-size: 40px;
+        font-size: 10px;
         font-weight: bold;
-        height: 250px;
-        width: 250px;
+        height: 50px;
+        width: 50px;
         justify-self: center;
         font-family: Cristmas;
     }
@@ -547,8 +547,22 @@ select {
         font-size: small;
         font-family: Cristmas;
     }
+    
+    .gameTopOne {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: rgb(93, 209, 122);
+        border: 1px solid black;
+        border-radius: 50px;
+        align-items: center;
+        justify-items: center;
+        font-size: 10px;
+        font-weight: bold;
+        height: 20px;
+        font-family: Cristmas;
+    }
 
-    .gameTopTwo {
+    .gameTopTwo div {
         display: grid;
         grid-template-columns: 3fr 1fr;
         /* background-color: rgb(39, 238, 211); */
@@ -558,9 +572,9 @@ select {
         justify-items: center;
         font-size: small;
         font-weight: bold;
-        height: 50px;
-        width: 100%;
-        font-size: 40px;
+        height: 20px;
+        width: 100px;
+        font-size: 10px;
     }
 
     .gameFoot:hover {
