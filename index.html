@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <div class="background">
         <div class="all__code">
             <div class="mainScreen" v-show="mainScreen">
@@ -55,7 +55,7 @@
 
             <div class="autors" v-show="autorsScreen">
                 <div class="urlAutors">
-                    <a href="https://scalan.com/author/qubedron/">Qubedron</a> <br> 
+                    <a href="https://scalan.com/author/qubedron/">Qubedron</a> <br>
                     <a href="https://github.com/kinonokia">kinonokia</a>
                 </div>
                 <div class="gameFoot" @click="goToMainScreen">Menu</div>
@@ -96,10 +96,8 @@
             </div>
 
             <div class="pravila" v-show="rulesScreen">
-                <div class="textPrav">A leader is selected, who receives a colored bandage and becomes in the center of
-                    the site. After the signal: "Catch!" - all the children scatter around the playground, and the
-                    driver tries to catch up with one of the players and tarnish. The one who was stained by the driver
-                    steps aside. After 2-3 repetitions, Fifteen changes.
+                <div class="textPrav">The goal of the game is to arrange the tiles in ascending order of vehicles,
+                    transport them inside the box, preferably so that the level of danger can be reduced.
                 </div>
                 <div class="gameFoot" @click="goToMainScreen">Menu
                 </div>
@@ -273,15 +271,15 @@
                     */
                     console.log("---------------------");
                     this.gameF = false;
-                    for(var i=0; i<this.desk.length; i++){
-                        for(var j=0; j<this.desk[i].length; j++){
-                            if(i==this.desk.length-1 && j==this.desk[i].length-1){
+                    for (var i = 0; i < this.desk.length; i++) {
+                        for (var j = 0; j < this.desk[i].length; j++) {
+                            if (i == this.desk.length - 1 && j == this.desk[i].length - 1) {
                                 // Skip last cell.
-                                
+
                             }
-                            else{
-                                var npp = i*this.desk.length + j + 1;
-                                if(parseInt(this.desk[i][j], 10) !== npp){
+                            else {
+                                var npp = i * this.desk.length + j + 1;
+                                if (parseInt(this.desk[i][j], 10) !== npp) {
                                     this.gameF = true;
                                 }
                                 //console.log(this.desk[i][j]+" ? "+npp + " "+this.gameF);
@@ -289,11 +287,11 @@
                         }
                     }
                     this.$forceUpdate();
-                    if(this.gameF == false){
+                    if (this.gameF == false) {
                         alert("Congratulation! You win!");
 
                     }
-                    
+
                 }
             }
         }
