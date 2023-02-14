@@ -72,22 +72,10 @@
                 </div>
                 <div class="gcentr">
                     <div class="gameBoard">
-                        <div class="number" @click="usersClick(0,0)">{{desk[0][0]}}</div>
-                        <div class="number" @click="usersClick(0,1)">{{desk[0][1]}}</div>
-                        <div class="number" @click="usersClick(0,2)">{{desk[0][2]}}</div>
-                        <div class="number" @click="usersClick(0,3)">{{desk[0][3]}}</div>
-                        <div class="number" @click="usersClick(1,0)">{{desk[1][0]}}</div>
-                        <div class="number" @click="usersClick(1,1)">{{desk[1][1]}}</div>
-                        <div class="number" @click="usersClick(1,2)">{{desk[1][2]}}</div>
-                        <div class="number" @click="usersClick(1,3)">{{desk[1][3]}}</div>
-                        <div class="number" @click="usersClick(2,0)">{{desk[2][0]}}</div>
-                        <div class="number" @click="usersClick(2,1)">{{desk[2][1]}}</div>
-                        <div class="number" @click="usersClick(2,2)">{{desk[2][2]}}</div>
-                        <div class="number" @click="usersClick(2,3)">{{desk[2][3]}}</div>
-                        <div class="number" @click="usersClick(3,0)">{{desk[3][0]}}</div>
-                        <div class="number" @click="usersClick(3,1)">{{desk[3][1]}}</div>
-                        <div class="number" @click="usersClick(3,2)">{{desk[3][2]}}</div>
-                        <div class="number" @click="usersClick(3,3)">{{desk[3][3]}}</div>
+                        <div v-for="(row, rowIndex) in desk">
+                            <div class="number" v-for="(cell, cellIndex) in row" 
+                                @click="usersClick(rowIndex,cellIndex)">{{desk[rowIndex][cellIndex]}}</div>
+                        </div>
                     </div>
                 </div>
                 <div class="gameFoot" @click="goToMainScreen">
